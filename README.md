@@ -1,11 +1,11 @@
-# FAIR-PLR: Code for Suicide Risk Prediction on NSDUH (2013–2023)
+# FAIR-PLR: Suicide Risk Prediction on NSDUH data (2013–2023)
 
 Source code, derived results, and figures for the paper
 
 > **Leveraging Functionally Adaptive Regularized Regression for Interpretable Suicide Risk Prediction and Subgroup Analysis**
 > Afrose S., Kazanis W. H., Trafton J., Kapadia A., Peluso A.
 > *npj Mental Health Research* (2026).
-> <https://doi.org/10.1038/s44184-026-00229-y>
+> [https://doi.org/10.1038/s44184-026-00229-y](https://doi.org/10.1038/s44184-026-00229-y)
 
 The FAIR-PLR framework fits a single penalized logistic regression in
 which every covariate interacts with a subgroup indicator and each
@@ -18,7 +18,6 @@ property.
 
 Raw NSDUH public-use files are **not** in this repository. They are
 freely available from SAMHSA (see *Data access* below).
-
 
 ## Quick start (TL;DR)
 
@@ -54,7 +53,6 @@ bash -c '
 If you only want to verify figures from the precomputed `results/`
 shipped with this repository, skip steps 3–4 and run step 5 directly.
 
-
 ## Directory layout
 
 ```
@@ -84,44 +82,43 @@ shipped with this repository, skip steps 3–4 and run step 5 directly.
 
 ### Source layout (`src/`)
 
-| File | Purpose | Manuscript artifact |
-|------|---------|---------------------|
-| `1_clean_data.py` | Raw NSDUH → harmonized per-year CSVs (+ survey weights) | Supp. Table 1 |
-| `2_generate_statistics_table.ipynb` | Descriptive statistics tables | Table 1, Table 2 |
-| `2_generate_statistics_table_combined_predictor.ipynb` | Combined-predictor descriptive statistics | Supp. Table 1 |
-| `4_baselines_and_stats.py` | FAIR-PLR + three baselines with bootstrap CIs and DeLong tests | Table 3 |
-| `5_fit_agnostic_plr.py` | Agnostic-PLR (single pooled elastic-net LR) | (comparison model) |
-| `6_fit_separate_plr.py` | Separate-PLR (one elastic-net LR per subgroup level) | (comparison model) |
-| `7_fit_fair_plr.py` | FAIR-PLR (combined subgroup + survey weighting) | main model |
-| `6_disparity_calculation.ipynb` | Cross-subgroup disparity ratios | Table 4, Table 5 |
-| `9_heatmap_crosssectional.py` | Cross-sectional coefficient-variability heatmap | Figure 2 |
-| `10_heatmap_pre_exposure.py` | Pre-exposure coefficient-variability heatmap | Supp. Figure 2 |
-| `build_subgroup_results.py` | Wide → long-format `subgroup_results_*.csv` for plotting | (preprocessing) |
-| `figure3_cross_sectional.py` | FAIR-PLR vs. separate-PLR performance (cross-sectional axes) | Figures 3–4 |
-| `figureS_supp_cross_sectional.py` | Cross-sectional performance (combined Yes+No) | Supp. Figures 3–7 |
-| `figureS_supp_pre_exposure.py` | Single-axis pre-exposure performance | Supp. Figures 8–13 |
-| `figureS_supp_coeff_cross_sectional.py` | Cross-sectional FAIR-PLR coefficient bar charts | Supp. Figures 14–18 |
-| `figureS_supp_coeff_pre_exposure.py` | Pre-exposure coefficient bar charts | Supp. Figure 19 |
-| `plotting.py` | Generic grouped-bar-chart figure generator | Figures 3–4, Supp. 8–13 (in-repo copies) |
-| `stats_testing.py` | Bootstrap CIs + DeLong paired AUC test | Table 3 |
-| `helper_function_fair.py` | `z_interact_multi_group()`, `get_n_k()`, `get_fair_plus_survey_weights()` | — |
-| `helper_functions_result.py` | `evaluate_model_by_group()` (AUC, TPR@k, Precision@k) | — |
-| `helper_function_disparity.py` | Disparity metrics (Δ_PM, max/min ratios) | Tables 4–5 |
-| `helper_functions.py` | Shared small utilities | — |
-| `_runtime.py` | Shared loading/preprocessing path for `5/6/7_fit_*.py` | — |
-| `fair_subgroup_combined_weighting_example.md` | Worked example of the combined subgroup + survey weight (Methods eq. 4) | — |
+| File                                                     | Purpose                                                                         | Manuscript artifact                        |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------ |
+| `1_clean_data.py`                                      | Raw NSDUH → harmonized per-year CSVs (+ survey weights)                        | Supp. Table 1                              |
+| `2_generate_statistics_table.ipynb`                    | Descriptive statistics tables                                                   | Table 1, Table 2                           |
+| `2_generate_statistics_table_combined_predictor.ipynb` | Combined-predictor descriptive statistics                                       | Supp. Table 1                              |
+| `4_baselines_and_stats.py`                             | FAIR-PLR + three baselines with bootstrap CIs and DeLong tests                  | Table 3                                    |
+| `5_fit_agnostic_plr.py`                                | Agnostic-PLR (single pooled elastic-net LR)                                     | (comparison model)                         |
+| `6_fit_separate_plr.py`                                | Separate-PLR (one elastic-net LR per subgroup level)                            | (comparison model)                         |
+| `7_fit_fair_plr.py`                                    | FAIR-PLR (combined subgroup + survey weighting)                                 | main model                                 |
+| `6_disparity_calculation.ipynb`                        | Cross-subgroup disparity ratios                                                 | Table 4, Table 5                           |
+| `9_heatmap_crosssectional.py`                          | Cross-sectional coefficient-variability heatmap                                 | Figure 2                                   |
+| `10_heatmap_pre_exposure.py`                           | Pre-exposure coefficient-variability heatmap                                    | Supp. Figure 2                             |
+| `build_subgroup_results.py`                            | Wide → long-format`subgroup_results_*.csv` for plotting                      | (preprocessing)                            |
+| `figure3_cross_sectional.py`                           | FAIR-PLR vs. separate-PLR performance (cross-sectional axes)                    | Figures 3–4                               |
+| `figureS_supp_cross_sectional.py`                      | Cross-sectional performance (combined Yes+No)                                   | Supp. Figures 3–7                         |
+| `figureS_supp_pre_exposure.py`                         | Single-axis pre-exposure performance                                            | Supp. Figures 8–13                        |
+| `figureS_supp_coeff_cross_sectional.py`                | Cross-sectional FAIR-PLR coefficient bar charts                                 | Supp. Figures 14–18                       |
+| `figureS_supp_coeff_pre_exposure.py`                   | Pre-exposure coefficient bar charts                                             | Supp. Figure 19                            |
+| `plotting.py`                                          | Generic grouped-bar-chart figure generator                                      | Figures 3–4, Supp. 8–13 (in-repo copies) |
+| `stats_testing.py`                                     | Bootstrap CIs + DeLong paired AUC test                                          | Table 3                                    |
+| `helper_function_fair.py`                              | `z_interact_multi_group()`, `get_n_k()`, `get_fair_plus_survey_weights()` | —                                         |
+| `helper_functions_result.py`                           | `evaluate_model_by_group()` (AUC, TPR@k, Precision@k)                         | —                                         |
+| `helper_function_disparity.py`                         | Disparity metrics (Δ_PM, max/min ratios)                                       | Tables 4–5                                |
+| `helper_functions.py`                                  | Shared small utilities                                                          | —                                         |
+| `_runtime.py`                                          | Shared loading/preprocessing path for`5/6/7_fit_*.py`                         | —                                         |
+| `fair_subgroup_combined_weighting_example.md`          | Worked example of the combined subgroup + survey weight (Methods eq. 4)         | —                                         |
 
 Figure 1 (main) and Supplementary Figure 1 are drawn directly in the
 manuscript LaTeX (TikZ) and are not produced by this repository.
-
 
 ## Data access
 
 Raw NSDUH public-use files (`NSDUH_<year>_Tab.txt` for 2020-2023, `.tsv`
 for 2013-2019) can be downloaded from:
 
-- SAMHSA data portal: <https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/datafiles>
-- ICPSR NAHDAP (alternate): <https://www.datafiles.samhsa.gov/>
+- SAMHSA data portal: [https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/datafiles](https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/datafiles)
+- ICPSR NAHDAP (alternate): [https://www.datafiles.samhsa.gov/](https://www.datafiles.samhsa.gov/)
 
 By default, the pipeline expects the raw files under `$NSDUH_DATA_DIR`
 and writes harmonized per-year CSVs to `$NSDUH_CLEAN_DIR` (default
@@ -138,17 +135,16 @@ The NSDUH analysis-weight variable name changed twice during 2013-2023
 in response to survey methodology redesigns. `src/1_clean_data.py`
 handles this automatically:
 
-| Years      | Weight          | Stratum        | Replicate |
-|------------|-----------------|----------------|-----------|
-| 2013-2019  | `ANALWT_C`      | `VESTR`        | `VEREP`   |
-| 2020       | `ANALWTQ1Q4_C`  | `VESTRQ1Q4_C`  | `VEREP`   |
-| 2021-2023  | `ANALWT2_C`     | `VESTR_C`      | `VEREP`   |
+| Years     | Weight           | Stratum         | Replicate |
+| --------- | ---------------- | --------------- | --------- |
+| 2013-2019 | `ANALWT_C`     | `VESTR`       | `VEREP` |
+| 2020      | `ANALWTQ1Q4_C` | `VESTRQ1Q4_C` | `VEREP` |
+| 2021-2023 | `ANALWT2_C`    | `VESTR_C`     | `VEREP` |
 
 The cleaned CSVs harmonize these into columns `SURVEY_WEIGHT`,
 `SURVEY_STRATUM`, `SURVEY_REPLICATE`, and `SURVEY_WEIGHT_TYPE` (the
 latter records the original variable name so downstream code can
 filter by methodology regime).
-
 
 ## Installation
 
@@ -177,7 +173,6 @@ R -e 'install.packages("glmnet", repos="https://cloud.r-project.org/")'
 
 On macOS, `brew install R` followed by the same `install.packages` call
 works.
-
 
 ## End-to-end reproduction
 
@@ -248,7 +243,6 @@ are listed separately in *Reproduce manuscript figures* below so
 reviewers can re-render figures without re-running the multi-hour
 modeling pipeline.
 
-
 ## Reproduce manuscript figures
 
 The figure scripts read the precomputed CSVs under `results/` (tracked
@@ -257,22 +251,22 @@ the modeling pipeline**.
 
 ### 1. Performance figures (grouped-bar)
 
-| Script | Manuscript artifact |
-|--------|--------------------|
-| `python src/build_subgroup_results.py` | (preprocessing) — converts wide-format metric CSVs into the long-format `subgroup_results_<axis>.csv` files used by every figure script below |
-| `python src/figure3_cross_sectional.py` | Main Figures 3 and 4 (cross-sectional axes: Marital × SPD, Rurality × Treatment, Sex × SPD, Age × SPD, BMI × SPD), Yes-only and No-only panels |
-| `python src/figureS_supp_cross_sectional.py` | Supp. Figures 3–7 (combined Yes+No cross-sectional) |
-| `python src/figureS_supp_pre_exposure.py` | Supp. Figures 8–13 (single-axis pre-exposure: Sex, Race, Age, BMI, Health Insurance, Rurality) |
-| `python -m src.plotting --input results/metrics --output figures --metric tpr_top5 --ylabel "TPR (top 5%)"` | In-repo copies of the grouped-bar performance figures (`figures/`) |
+| Script                                                                                                        | Manuscript artifact                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `python src/build_subgroup_results.py`                                                                      | (preprocessing) — converts wide-format metric CSVs into the long-format`subgroup_results_<axis>.csv` files used by every figure script below     |
+| `python src/figure3_cross_sectional.py`                                                                     | Main Figures 3 and 4 (cross-sectional axes: Marital × SPD, Rurality × Treatment, Sex × SPD, Age × SPD, BMI × SPD), Yes-only and No-only panels |
+| `python src/figureS_supp_cross_sectional.py`                                                                | Supp. Figures 3–7 (combined Yes+No cross-sectional)                                                                                                |
+| `python src/figureS_supp_pre_exposure.py`                                                                   | Supp. Figures 8–13 (single-axis pre-exposure: Sex, Race, Age, BMI, Health Insurance, Rurality)                                                     |
+| `python -m src.plotting --input results/metrics --output figures --metric tpr_top5 --ylabel "TPR (top 5%)"` | In-repo copies of the grouped-bar performance figures (`figures/`)                                                                                |
 
 ### 2. Coefficient figures (heatmaps and per-axis bar charts)
 
-| Script | Manuscript artifact |
-|--------|--------------------|
-| `python src/9_heatmap_crosssectional.py` | Figure 2 (cross-sectional coefficient-variability heatmap) |
-| `python src/10_heatmap_pre_exposure.py` | Supp. Figure 2 (pre-exposure coefficient-variability heatmap) |
+| Script                                               | Manuscript artifact                                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `python src/9_heatmap_crosssectional.py`           | Figure 2 (cross-sectional coefficient-variability heatmap)                                 |
+| `python src/10_heatmap_pre_exposure.py`            | Supp. Figure 2 (pre-exposure coefficient-variability heatmap)                              |
 | `python src/figureS_supp_coeff_cross_sectional.py` | Supp. Figures 14–18 (cross-sectional FAIR-PLR coefficient bar charts, SPD-Yes vs. SPD-No) |
-| `python src/figureS_supp_coeff_pre_exposure.py` | Supp. Figure 19 sub-panels (pre-exposure coefficient bar charts) |
+| `python src/figureS_supp_coeff_pre_exposure.py`    | Supp. Figure 19 sub-panels (pre-exposure coefficient bar charts)                           |
 
 ### Note on figure output paths
 
@@ -285,7 +279,6 @@ cloning only this repository will create those sibling directories
 beside the repo. To redirect the figures into the in-repo `figures/`
 tree instead, edit the `_REPO`/`_MAN_LOW`/`_SUPP_LOW` path constants at
 the top of each script (search for `os.path.join(_REPO, ...)`).
-
 
 ## Citing
 
@@ -302,7 +295,6 @@ If you use this code, please cite:
   doi={10.1038/s44184-026-00229-y}
 }
 ```
-
 
 ## License
 

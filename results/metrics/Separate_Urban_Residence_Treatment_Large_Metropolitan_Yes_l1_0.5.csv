@@ -1,0 +1,7 @@
+Subset,Group,Group Value,Patients,AUC-ROC,RMSE,TPR (%),Precision (%),TP %,Accuracy,F1 Score,TP,TPR,FP,FPR,FN,FNR
+Overall,All,All,7271,0.761,0.531,100.0,16.408,100.0,0.717,0.456,863,0.723,1728,0.284,330,0.277
+Top 1% Risk,,,72,0.5,0.782,2.347,38.889,2.347,0.389,0.56,28,1.0,44,1.0,0,0.0
+Top 5% Risk,,,363,0.5,0.816,10.142,33.333,10.142,0.333,0.5,121,1.0,242,1.0,0,0.0
+Overall,Urban Residence:Treatment,Large Metropolitan:Yes,7271,0.761,0.531,100.0,16.408,100.0,0.717,0.456,863,0.723,1728,0.284,330,0.277
+Top 1% Risk,Urban Residence:Treatment,Large Metropolitan:Yes,72,0.5,0.782,2.347,38.889,2.347,0.389,0.56,28,1.0,44,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Large Metropolitan:Yes,363,0.5,0.816,10.142,33.333,10.142,0.333,0.5,121,1.0,242,1.0,0,0.0

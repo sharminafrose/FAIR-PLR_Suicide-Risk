@@ -1,0 +1,22 @@
+Subset,Group,Group Value,Patients,AUC-ROC,RMSE,TPR (%),Precision (%),TP %,Accuracy,F1 Score,TP,TPR,FP,FPR,FN,FNR
+Overall,All,All,90469,0.89,0.211,100.0,6.385,100.0,0.941,0.335,1343,0.233,897,0.011,4433,0.767
+Top 1% Risk,,,904,0.557,0.471,10.336,66.04,10.336,0.66,0.795,597,1.0,307,1.0,0,0.0
+Top 5% Risk,,,4523,0.615,0.49,40.149,51.271,40.149,0.586,0.589,1343,0.579,897,0.407,976,0.421
+Overall,Urban Residence:Treatment,Small Metropolitan:No,26081,0.875,0.172,100.0,3.83,100.0,0.964,0.271,176,0.176,125,0.005,823,0.824
+Top 1% Risk,Urban Residence:Treatment,Small Metropolitan:No,260,0.497,0.491,15.816,60.769,15.816,0.608,0.756,158,1.0,102,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Small Metropolitan:No,1304,0.677,0.457,46.246,35.429,46.246,0.685,0.461,176,0.381,125,0.148,286,0.619
+Overall,Urban Residence:Treatment,Large Metropolitan:No,33561,0.869,0.17,100.0,3.677,100.0,0.964,0.112,76,0.062,52,0.002,1158,0.938
+Top 1% Risk,Urban Residence:Treatment,Large Metropolitan:No,335,0.566,0.498,14.83,54.627,14.83,0.525,0.489,76,0.415,52,0.342,107,0.585
+Top 5% Risk,Urban Residence:Treatment,Large Metropolitan:No,1678,0.636,0.472,49.19,36.174,49.19,0.653,0.207,76,0.125,52,0.049,531,0.875
+Overall,Urban Residence:Treatment,Nonmetropolitan:No,13401,0.855,0.174,100.0,3.955,100.0,0.963,0.29,101,0.191,66,0.005,429,0.809
+Top 1% Risk,Urban Residence:Treatment,Nonmetropolitan:No,134,0.484,0.475,16.981,67.164,16.981,0.672,0.804,90,1.0,44,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Nonmetropolitan:No,670,0.698,0.453,46.415,36.716,46.415,0.685,0.489,101,0.411,66,0.156,145,0.589
+Overall,Urban Residence:Treatment,Large Metropolitan:Yes,7266,0.849,0.319,100.0,16.323,100.0,0.855,0.431,400,0.337,269,0.044,786,0.663
+Top 1% Risk,Urban Residence:Treatment,Large Metropolitan:Yes,72,0.579,0.487,3.879,63.889,3.879,0.639,0.78,46,1.0,26,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Large Metropolitan:Yes,363,0.49,0.477,20.152,65.84,20.152,0.658,0.794,239,1.0,124,1.0,0,0.0
+Overall,Urban Residence:Treatment,Nonmetropolitan:Yes,3290,0.824,0.334,100.0,17.812,100.0,0.845,0.431,193,0.329,117,0.043,393,0.671
+Top 1% Risk,Urban Residence:Treatment,Nonmetropolitan:Yes,32,0.532,0.396,4.437,81.25,4.437,0.812,0.897,26,1.0,6,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Nonmetropolitan:Yes,164,0.633,0.483,16.894,60.366,16.894,0.604,0.753,99,1.0,65,1.0,0,0.0
+Overall,Urban Residence:Treatment,Small Metropolitan:Yes,6870,0.832,0.335,100.0,18.064,100.0,0.838,0.417,397,0.32,268,0.048,844,0.68
+Top 1% Risk,Urban Residence:Treatment,Small Metropolitan:Yes,68,0.577,0.406,4.351,79.412,4.351,0.794,0.885,54,1.0,14,1.0,0,0.0
+Top 5% Risk,Urban Residence:Treatment,Small Metropolitan:Yes,343,0.615,0.463,18.614,67.347,18.614,0.673,0.805,231,1.0,112,1.0,0,0.0

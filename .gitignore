@@ -1,0 +1,114 @@
+# =====================================================================
+# Python / build artifacts
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# =====================================================================
+# Virtual environments
+# =====================================================================
+.venv/
+.venv_*/
+venv/
+env/
+ENV/
+
+# =====================================================================
+# IDE / editor / OS
+# =====================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# =====================================================================
+# Jupyter
+# =====================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.executed.ipynb
+
+# =====================================================================
+# Claude Code / AI-assistant artifacts (do NOT publish)
+# =====================================================================
+.claude/
+.claude.local/
+CLAUDE.md
+CLAUDE.local.md
+*.claude.md
+.cursor/
+.aider*
+
+# =====================================================================
+# Plans, scratch, hand-off notes (working docs, not for reviewers)
+# =====================================================================
+plan/
+plans/
+_plans/
+temp/
+tmp/
+scratch/
+HANDOFF*.md
+TODO.md
+NOTES.md
+
+# =====================================================================
+# Raw data (large; subject to SAMHSA terms of use; fetch from SAMHSA)
+# =====================================================================
+data_raw/
+NSDUH_*.txt
+NSDUH_*.tsv
+
+# Cleaned per-year CSVs are regeneratable; uncomment to omit them.
+# data_clean/
+
+# =====================================================================
+# Model artifacts (.pkl). Track only the canonical corrected-weight
+# versions explicitly through the !-rules below if needed.
+# =====================================================================
+*.pkl
+
+# =====================================================================
+# Legacy / archived results (pre-correction snapshot kept locally for
+# diff comparisons during the revision; do NOT publish).
+# =====================================================================
+*.pre_survey_weight_*/
+results/_archive/
+*_legacy/
+*.legacy/
+
+# =====================================================================
+# Runtime logs
+# =====================================================================
+logs/
+*.log
+
+# =====================================================================
+# Distribution tarballs
+# =====================================================================
+*.tar.gz
+*.zip
+
+# =====================================================================
+# LaTeX build output (if .tex sources end up co-located)
+# =====================================================================
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.synctex.gz
+texput.log

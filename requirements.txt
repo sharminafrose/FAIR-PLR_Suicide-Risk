@@ -1,0 +1,21 @@
+# Python dependencies for the FAIR-PLR NSDUH pipeline.
+# Tested with Python 3.10-3.12. Pin to exact minor versions if reproducibility
+# at the result-file level is required for an audit.
+
+numpy>=1.24,<3.0
+pandas>=2.0,<3.0
+scipy>=1.10,<2.0
+scikit-learn>=1.3,<2.0
+matplotlib>=3.7,<4.0
+seaborn>=0.12,<1.0
+
+# R bridge for FAIR-PLR (requires R + the glmnet package installed separately;
+# see README.md for platform-specific installation notes).
+rpy2>=3.5,<4.0
+
+# Notebook execution (used by run_all.sh when invoking .ipynb files headlessly).
+jupyter>=1.0
+nbconvert>=7.0
+
+# Optional but recommended for CSV performance.
+pyarrow>=14.0

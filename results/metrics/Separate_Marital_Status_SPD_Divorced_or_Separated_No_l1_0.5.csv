@@ -1,0 +1,7 @@
+Subset,Group,Group Value,Patients,AUC-ROC,RMSE,TPR (%),Precision (%),TP %,Accuracy,F1 Score,TP,TPR,FP,FPR,FN,FNR
+Overall,All,All,7852,0.515,0.153,100.0,2.356,100.0,0.976,0.0,0,0.0,0,0.0,185,1.0
+Top 1% Risk,,,78,0.751,0.3,3.784,8.974,3.784,0.91,0.0,0,0.0,0,0.0,7,1.0
+Top 5% Risk,,,392,0.705,0.182,7.027,3.316,7.027,0.967,0.0,0,0.0,0,0.0,13,1.0
+Overall,Marital Status:SPD,Divorced or Separated:No,7852,0.515,0.153,100.0,2.356,100.0,0.976,0.0,0,0.0,0,0.0,185,1.0
+Top 1% Risk,Marital Status:SPD,Divorced or Separated:No,78,0.751,0.3,3.784,8.974,3.784,0.91,0.0,0,0.0,0,0.0,7,1.0
+Top 5% Risk,Marital Status:SPD,Divorced or Separated:No,392,0.705,0.182,7.027,3.316,7.027,0.967,0.0,0,0.0,0,0.0,13,1.0
